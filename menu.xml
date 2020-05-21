@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+<menu id="root-menu" label="Openbox 3">
+<separator label="ARCHDESK" />
+
+
+<item label="RUNIT!">
+    <action name="Execute">
+      <command>gmrun</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+<item label="TERMNL">
+    <action name="Execute">
+      <command>st</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="TXTEDIT">
+    <action name="Execute">
+      <command>st -exec nvim</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="MUSIC">
+    <action name="Execute">
+      <command>st -exec ncspot</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="BRWSR">
+    <action name="Execute">
+      <command>qutebrowser</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+<item label="DSCRD">
+	<action name="Execute">
+	<command>discord</command>
+</action>
+</item>
+  <item label="FILES">
+    <action name="Execute">
+      <command>st -exec ranger</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+<item label="WALLPP">
+    <action name="Execute">
+      <command>nitrogen</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+<menu id="system-menu" label="SYSTEM">
+  <item label="OBCONF">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item
+  <item label="CONFIGFILES">
+    <action name="Execute">
+      <command>st -exec nvim -c $HOME/.config/openbox/menu.xml</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="THEME">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="CUPS">
+    <action name="Execute">
+      <command>xdg-open http://localhost:631/</command>
+      <startupnotify>
+        <enabled>no</enabled>
+        <icon>cups</icon>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="RECONF">
+    <action name="Reconfigure" />
+  </item>
+  <item label="RESET">
+    <action name="Restart" />
+  </item>
+</menu>
+  <separator />
+  <item label="BYEx2">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+</openbox_menu>
