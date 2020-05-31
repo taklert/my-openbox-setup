@@ -1,1 +1,1 @@
-valami
+tanulmányozom a github működését, ha kiismertem, akkor felteszem majd ide a teljes konfigomat, valamint azon csomagok/szoftverek listáját, amiket használok az aktuális setupomhoz..
