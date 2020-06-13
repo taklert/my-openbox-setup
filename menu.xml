@@ -2,14 +2,13 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 <menu id="root-menu" label="Openbox 3">
 <separator label="ARCHDESK" />
-
-
 <item label="RUNIT!">
     <action name="Execute">
-      <command>gmrun</command>
+      <command>dmenu_run -i -p 'Search' -fn 'Sans Bold:pixelsize=18' -nb '#000000' -nf '#999999' -sf '#000000' -sb '#FDE308'</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
+<separator />
 <item label="TERMNL">
     <action name="Execute">
       <command>st</command>
@@ -57,10 +56,10 @@
       <command>obconf</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
-  </item
+  </item>
   <item label="CONFIGFILES">
     <action name="Execute">
-      <command>st -exec nvim -c $HOME/.config/openbox/menu.xml</command>
+      <command>st -exec nvim -p ~/.config/openbox/menu.xml ~/.config/openbox/rc.xml</command>
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
@@ -70,9 +69,9 @@
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
-  <item label="CUPS">
+  <item label="scrot-5">
     <action name="Execute">
-      <command>xdg-open http://localhost:631/</command>
+      <command>scrot -d 5 '%Y-%m-%d-%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/Screenshotz/'</command>
       <startupnotify>
         <enabled>no</enabled>
         <icon>cups</icon>
@@ -86,12 +85,27 @@
   <item label="RESET">
     <action name="Restart" />
   </item>
-</menu>
   <separator />
-  <item label="BYEx2">
+  <item label="LOGOUT">
     <action name="Exit">
       <prompt>yes</prompt>
     </action>
   </item>
+  <item label="SLEEP">
+	  <action name="Execute">
+		  <execute>systemctl suspend</execute>
+		  </action>
+  </item>
+  <item label="RESTRT">
+	  <action name="Execute">
+		  <execute>systemctl reboot</execute>
+	  </action>
+  </item>
+  <item label="SHUTDWN">
+	  <action name="Execute">
+		  <execute>systemctl poweroff</execute>
+	  </action>
+  </item>
+  </menu>
 </menu>
 </openbox_menu>

@@ -10,7 +10,7 @@
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
-    <followMouse>yes</followMouse>
+    <followMouse>no</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>yes</focusLast>
     <!-- focus the last used window when changing desktops, instead of the one
@@ -42,8 +42,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>MagyArch-dark</name>
-    <titleLayout>NLIMC</titleLayout>
+    <name>Archdesk_Cyan</name>
+    <titleLayout>NIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -55,14 +55,15 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
+    <cornerRadius>4</cornerRadius>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
-      <size>8</size>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
@@ -75,21 +76,21 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
-      <size>9</size>
+      <name>Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
-      <size>9</size>
+      <name>Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
@@ -155,7 +156,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
+    <top>5</top>
     <bottom>5</bottom>
     <left>5</left>
     <right>5</right>
@@ -386,9 +387,9 @@
       <action name="EXECUTE">
         <startupnotify>
           <enabled>true</enabled>
-          <name>gmrun</name>
+          <name>dmenu</name>
         </startupnotify>
-        <command>gmrun</command>
+        <command>dmenu_run -i -p 'Search' -fn 'Sans Bold:pixelsize=18' -nb '#000000' -nf '#999999' -sf '#000000' -sb '#FDE308'</command>
       </action>
     </keybind>
     <keybind key="w-S-r">
@@ -855,5 +856,19 @@
 
   # end of the example
 -->
+    <application class="firefox">
+      <decor>no</decor>
+    </application>
+    <application class="st-256color">
+      <decor>no</decor>
+    </application>
+    <application class="Inkscape">
+      <decor>no</decor>
+      <desktop>4</desktop>
+    </application>
+    <application class="Geany">
+      <decor>no</decor>
+      <desktop>2</desktop>
+    </application>
   </applications>
 </openbox_config>
